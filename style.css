@@ -1,18 +1,15 @@
 @charset "utf-8";
 
 html {
-  margin: 110px;
-  border: 0px;
-  padding: 0px 0px 0px 0px;
   color: #121317;
   background-color: #ffffff;
 }
 
 body {
-  margin: 140px;
-  margin-top: -5.0em;
-  margin-bottom: -5.0em;
-  margin-right: -3.0em;
+  margin: 40px auto;
+  max-width: 1200px;
+  line-height: 1.4;
+  border: #123456 0px solid;
   color: #121317;
   background-color: #ffffff;
 }
@@ -26,7 +23,7 @@ html, body, p, th, td, li, dd, dt {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 { font-size: 2.0em; }
@@ -37,7 +34,7 @@ h5 { font-size: 0.9em; }
 h6 { font-size: 0.9em; }
 
 table, th, td {
-  border: 1px solid #121317;
+  border: 1px solid #eee;
   border-collapse: collapse;
 }
 
@@ -48,15 +45,15 @@ th, td {
 th {
   letter-spacing: 0.1em;
   font-size: 90%;
-  border-bottom: 1px solid #121317;
-  border-top: 1px solid #121317;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   text-align: left;
 }
 
 hr {
-  color: #121317; 
+  color: #eee; 
   display: block; height: 1px;
-  border: 0; border-top: 1px solid #121317;
+  border: 0; border-top: 1px solid #eee;
   margin: 1em 0; padding: 0;
 }
 
@@ -82,7 +79,7 @@ sidenav {
   letter-spacing: 0;
   text-indent: 0;
   color: #121317;
-  background-color: #999999;
+  background-color: #121317;
 }
 
 sidenav a {
@@ -94,9 +91,7 @@ sidenav a {
 }
 
 .list {
-  /*border-left: 1px solid #121317;*/
   float: right;
-  /*margin-left: 1px;*/
   width: 150px;
 }
 
@@ -105,19 +100,19 @@ a {
 }
 
 a:link {
-  color: #121317;
+  color: #0b0080;
 }
 
 a:visited {
-  color: #121317;
+  color: #0b0080;
 }
 
 a:hover {
-  color: #121317;
+  color: #0b0080;
 }
 
 a:active {
-  color: #121317;
+  color: #0b0080;
 }
 
 footer {
@@ -125,16 +120,22 @@ footer {
   font-weight: normal;
   letter-spacing: 0;
   text-indent: 0;
-  /*border-top: 2px solid #254A73;*/
   color: #121317;
   background-color: #ffffff;
 }
 
 code {
-		font-family: monospace;
-		font-size: 110%;
+  font-family: monospace;
+  font-size: 115%;
 }
-	
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #eee;
+  padding: 10px 15px;
+}
 
 /*LaTeX into html CSS generated*/ 
 /* start css.sty */
