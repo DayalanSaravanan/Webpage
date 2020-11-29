@@ -29,30 +29,29 @@
 		<hr />
 
 		<!-- <div class="column"> -->
-		<p><ins>Python:</ins></p> 
-		<p><ins>Creating a virtual environment:</ins> <br>
-		In Python 3.6+, the recommended way to create a virtual environment is to run: <br>
-       	$ python3 -m venv /path/to/new/virtual/environment <br>
-       	Make sure that python3 resolves to whichever version of python3 you'd like to bind
+        <h4>Creating a virtual environment in Python:</h4>
+        <p>In Python 3.6+, the recommended way to create a virtual environment is to run:</p>
+        <code>$ python3 -m venv /path/to/new/virtual/environment</code> 
+        <p>Make sure that python3 resolves to whichever version of python3 you'd like to bind
 		to your virtual environment. For example, to create a new virtual environment named
-		dsci in your home directory, you could run: <br>
-		$ python3 -m venv ~/dsci <br>
-		To activate a virtual environment on macOS or Linux running bash or zsh, source the 
-		following path: <br>
-       	$ source ~/dsci/bin/activate and for deactivation: $ deactivate </p> 
+		dsci in your home directory, you could run:</p>
+        <code>$ python3 -m venv ~/dsci</code>
+        <p>To activate a virtual environment on macOS or Linux running bash or zsh, source the 
+		following path:</p>
+        <code>$ source ~/dsci/bin/activate</code> <p>and for deactivation:</p> <code>$ deactivate</code>
 
-		<p><ins>Managing packages with pip:</ins> <br>
-		$ pip search &lt;pkg_name&gt; <br>
-		$ pip show &lt;pkg_name&gt; <br>
-		$ pip install &lt;pkg_name&gt; <br>
-		$ pip install &lt;pkg_name==version_number&gt; <br>
-		$ pip install --upgrade &lt;pkg_name&gt; <br>
-		$ pip list <br>
-		$ pip freeze > requirements.tat <br>
-		$ pip install -r requirements.txt </p>
+        <h4>Managing packages with pip:</h4>
+        <code>$ pip search &lt;pkg_name&gt;</code> <br>
+        <code>$ pip show &lt;pkg_name&gt;</code> <br>
+        <code>$ pip install &lt;pkg_name&gt;</code> <br>
+        <code>$ pip install &lt;pkg_name == version_number&gt;</code> <br>
+        <code>$ pip install --upgrade &lt;pkg_name&gt;</code> <br>
+        <code>$ pip list</code> <br>
+        <code>$ pip freeze > requirements.tat</code> <br>
+        <code>$ pip install -r requirements.txt</code> </p>
 		<!-- </div> -->
 
-		<h3>Namespaces and Variable Scoping</h3>
+		<h4>Namespaces and Variable Scoping</h4>
 		<p>When you type the name of a variable inside a script or interactive python 
 		session, python needs to figure out exactly what variable you're using. To prevent
 		variables you create from overwriting or interfering with variables in python itself
@@ -70,21 +69,21 @@
 		are part of python's core. You can see the contents of any of the namespaces by 
 		using the <code>dir</code>command:</p>
 
-		<code>>>>dir()</code>
-		<code>>>>dir(__builtins___)</code>
+        <code>>>> dir()</code> <br>
+		<code>>>> dir(__builtins__)</code>
 
 		<p>The <code>__builtins__</code> namespace contains all the functions, variables and
 		exceptions which are part of python's core.</p>
 
 		<!--<div class="list">-->
 		<a href="install_r.html">Instructions for installing R in Debian 10 and add packages
-			from the CRAN</a> <br>
+            from the CRAN</a> <br>
 		<a href="install_python.html">Instructions for installing Python in Debian 10
-			GNU/Linux</a> <br>
+            GNU/Linux</a> <br>
 		<a href="http://scipy-lectures.org/index.html">Scipy Lecture Notes - One document ta
-			learn numerics, science, and data with Python</a> <br>
+            learn numerics, science, and data with Python</a> <br>
         <a href="ipython_customize_color.html">Customize the color of text in IPython</a> <br>
-		<a href="vim.html" style="text-decoration: none">Vim Reference</a> <br>
+        <a href="vim.html" style="text-decoration: none">Vim Reference</a> <br>
 		<a href="git.html" style="text-decoration: none">Git Reference</a>
 		<!--</div>-->
 
