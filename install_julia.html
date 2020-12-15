@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="GitLab Pages">
+		<title>Dayalan Saravanan</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body style="background: #ffffff;" onload="onPageLoad();">
+
+		<div>
+			<header>
+				<h2>Dayalan Saravanan</h2>
+			</header>
+
+			<nav>
+				<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+				<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
+				<a href="linux.html">Linux</a> &nbsp;&nbsp;
+				<a href="math.html">Math</a> &nbsp;&nbsp;
+				<a href="music.html">Music</a> &nbsp;&nbsp;
+				<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+				<a href="programming.html">Programming</a>
+			</nav>
+		</div>
+
+		<hr />
+
+        <h4>Installing Julia</h4>
+
+        <p>It is strongly recommended that the official generic binairs from the downloads
+        page be used to install Julia on Linux. Generic Linux binaries for <code>x86</code> 
+        can be downloaded. This will get you a compressed <code>tar.gz</code> archive that will 
+        have a name similar to <code>julia-1.5.3-linux-x86_64.tar.gz</code>. The following 
+        set of commands downloads the latest version of Julia into a directory named 
+        <code>julia-1.5.3</code>.</p>
+
+<pre><code>$ mkdir ~/.julia && cd "$_"
+$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.5/julia-1.5.3-linux-x86_64.tar.gz
+$ tar zxvf julia-1.5.3-linux-x86_64.tar.gz</code></pre>
+
+        <p>A directory with the extracted contents will be generated in the same directory
+        as the compressed archive with a name similar to julia-1.5.3, where 1.5.3 is Julia's
+        version number. This is the directory from which Julia will be run; no further installation
+        is needed. To run it, navigate to the <code>julia-1.5.3/bin/</code> directory and type:
+        <code>./julia</code></p>
+
+        <p>To add Julia's <code>bin</code> folder (with full path) to <code>PATH</code> 
+	    environment variable, you can edit the <code>~/.bashrc</code> file.</p>
+
+        <pre><code>export PATH="$PATH:/home/user/.julia/julia-1.5.3/bin"</code></pre>
+
+        <p>To activate the changes in the current shell, you have to <code>source</code>
+        the updated <code>~/.bashrc</code> file.</p>
+
+        <pre><code>$ source ~/.bashrc</code></pre>
+
+        <p>Now we can invoke Julia by just typing <code>julia</code> at the command prompt.
+        We can do this now from any directory because the <code>PATH</code> has been updated
+        to look for executable programs in our new directory.</p>
+
+<pre><code>$ julia --version
+julia version 1.5.3
+</code></pre>
+
+        <p>Julia installs all its files in a single directory. Deleting the directory where
+        Julia was installed is sufficient. If you would also like to remove your packages,
+        remove <code>~/.julia</code>. The startup file is at <code>~/.julia/config/startup.jl</code> and the history at <code>~/.julia/logs/repl_history.jl</code>
+
+        <p>Resources for Julia programming: <br>
+        Download Julia: <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a> <br>
+        Julia 1.5 Documentation: <a href="https://docs.julialang.org/en/v1/">https://docs.julialang.org/en/v1/</a> <br>
+        Get started with Julia: <a href="https://julialang.org/learning/">https://julialang.org/learning/</a></p> 
+      
+		<hr />
+
+		<dev>
+			<footer>
+				&copy; 2020 Dayalan Saravanan
+			</footer>
+		</dev>
+
+	</body>
+
+</html>
