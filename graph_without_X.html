@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="GitLab Pages">
+		<title>Dayalan Saravanan</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body style="background: #ffffff;" onload="onPageLoad();">
+
+		<div>
+			<header>
+				<h2>Dayalan Saravanan</h2>
+			</header>
+
+			<nav>
+				<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+				<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
+				<a href="linux.html">Linux</a> &nbsp;&nbsp;
+				<a href="math.html">Math</a> &nbsp;&nbsp;
+				<a href="music.html">Music</a> &nbsp;&nbsp;
+				<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+				<a href="programming.html">Programming</a>
+			</nav>
+		</div>
+
+		<hr />
+
+        <h4>Generating matplotlib graphs without a running X server</h4>
+
+        <code>import matplotlib as mpl <br>
+              mpl.use('Agg') <br>
+              import matplotlib.pyplot as plt <br>
+
+              fig = plt.figure() <br>
+              ax = fig.add_subplot(111) <br>
+              ax.plot(range(10)) <br>
+              fig.savefig('plot.pdf') </code>
+
+		
+		<hr />
+
+		<dev>
+			<footer>
+				&copy; 2020 Dayalan Saravanan
+			</footer>
+		</dev>
+
+	</body>
+
+</html>
