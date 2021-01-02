@@ -137,6 +137,12 @@ pre {
   padding: 10px 15px;
 }
 
+span {
+  font: 18px Arial, sans-serif;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
 /*LaTeX into html CSS generated*/ 
 /* start css.sty */
 .ptmr7t-x-x-109{font-family: monospace;}
