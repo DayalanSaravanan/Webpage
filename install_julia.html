@@ -33,24 +33,25 @@
         <p>It is strongly recommended that the official generic binairs from the downloads
         page be used to install Julia on Linux. Generic Linux binaries for <code>x86</code> 
         can be downloaded. This will get you a compressed <code>tar.gz</code> archive that will 
-        have a name similar to <code>julia-1.5.3-linux-x86_64.tar.gz</code>. The following 
-        set of commands downloads the latest version of Julia into a directory named 
-        <code>julia-1.5.3</code>.</p>
+        have a name similar to <code>julia-1.6.2-linux-x86_64.tar.gz</code>. The following 
+        set of commands downloads the current stable release of Julia into a directory named 
+        <code>julia-1.6.2</code>.</p>
 
-<pre><code>$ mkdir ~/.julia && cd "$_"
-$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.5/julia-1.5.3-linux-x86_64.tar.gz
-$ tar zxvf julia-1.5.3-linux-x86_64.tar.gz</code></pre>
+<pre><code>$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.2-linux-x86_64.tar.gz
+$ tar zxvf julia-1.6.2-linux-x86_64.tar.gz
+$ mv julia-1.6.2/ .julia/
+</code></pre>
 
         <p>A directory with the extracted contents will be generated in the same directory
-        as the compressed archive with a name similar to julia-1.5.3, where 1.5.3 is Julia's
+        as the compressed archive with a name similar to julia-1.6.2, where 1.6.2 is Julia's
         version number. This is the directory from which Julia will be run; no further installation
-        is needed. To run it, navigate to the <code>julia-1.5.3/bin/</code> directory and type:
+        is needed. To run it, navigate to the <code>julia/bin/</code> directory and type:
         <code>./julia</code></p>
 
         <p>To add Julia's <code>bin</code> folder (with full path) to <code>PATH</code> 
         environment variable, you can edit the <code>~/.bashrc</code> file.</p>
 
-        <pre><code>export PATH="$PATH:/home/user/.julia/julia-1.5.3/bin"</code></pre>
+        <pre><code>export PATH="$PATH:/home/user/.julia/bin"</code></pre>
 
         <p>To activate the changes in the current shell, you have to <code>source</code>
         the updated <code>~/.bashrc</code> file.</p>
@@ -62,7 +63,7 @@ $ tar zxvf julia-1.5.3-linux-x86_64.tar.gz</code></pre>
         to look for executable programs in our new directory.</p>
 
 <pre><code>$ julia --version
-julia version 1.5.3
+julia version 1.6.2
 </code></pre>
 
         <p>Julia installs all its files in a single directory. Deleting the directory where
@@ -71,9 +72,64 @@ julia version 1.5.3
 
         <p>Resources for Julia programming: <br>
         Download Julia: <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a> <br>
-        Julia 1.5 Documentation: <a href="https://docs.julialang.org/en/v1/">https://docs.julialang.org/en/v1/</a> <br>
+        Julia 1.6 Documentation: <a href="https://docs.julialang.org/en/v1/">https://docs.julialang.org/en/v1/</a> <br>
         Get started with Julia: <a href="https://julialang.org/learning/">https://julialang.org/learning/</a></p> 
       
+        <h4>Creating a virtual environment in Julia:</h4>
+
+        <p>In Julia, VirtualEnv.jl provides support for creating environments with their
+        own site directories, isolated from system site directories. Each virtual
+        environment has its own Julia binary (which matches the version of the binary that
+        was used to create this environment) and can have its own independent set of
+        installed Julia packages in its site directories.</p>
+
+        <h4>Installation:</h4>
+
+<pre><code>$ julia
+
+julia> # press the key ] to enter package mode
+
+(@v1.6) pkg> add VirtualEnv
+
+(@v1.6) pkg> # hit backspace to exit package mode
+
+julia> exit()
+</code></pre>
+
+        <p>venv creates virtual Julia environments in one or more target directories.</p>
+
+<pre><code>  Usage:
+
+    venv [options] [flags] <env_dirs>
+
+  Args:
+
+    <env_dirs>            one or more directories to create environments in
+
+  Options:
+
+    -p, --prompt <prompt> provides an alternative prompt prefix for this environemtn. (Default: ENV_DIR)
+
+  Flags:
+
+    -c, --clear           delete the contents of the environment directory if it alreadyexists. (Default: false)
+
+    -u, --upgrade         upgrade the environment directory to use this version of Julia. (Default: false)
+
+    -h, --help            print this help message
+
+    -v, --version         print version information
+</code></pre>
+
+        <p>Print help dialogue:</p>
+        <code>$ venv -h</code>
+        <p>Creating a virtual environment:</p>
+        <code>$ venv ~/dsci</code>
+        <p>Activating the virtual environment:</p>
+        <code>$ source ~/dsci/bin/activate</code>
+        <p>Deactivating an environment:</p>
+        <code>$ deactivate</code>
+
         <hr />
 
         <dev>
