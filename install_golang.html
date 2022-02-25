@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="GitLab Pages">
+        <title>Dayalan Saravanan's homepage</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+
+    <body style="background: #ffffff;" onload="onPageLoad();">
+
+        <div>
+            <header>
+                <h2>Dayalan Saravanan</h2>
+            </header>
+
+            <nav>
+                <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+                <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
+                <a href="linux.html">Linux</a> &nbsp;&nbsp;
+                <a href="math.html">Math</a> &nbsp;&nbsp;
+                <a href="music.html">Music</a> &nbsp;&nbsp;
+                <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+                <a href="programming.html">Programming</a>
+            </nav>
+        </div>
+
+        <hr />
+
+        <h4>Golang Installation</h4>
+        <p>Instructions to <a href="https://go.dev/doc/install">download and install</a> 
+        the latest Golang version in Debian
+        10</p>
+
+        <ol>
+        <li>Download the Go installer: <br><br>
+        <code>$ wget -c https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz</code> 
+        </li> <br>
+
+        <li>Extract the archive you downloaded into /usr/local, creating a Go tree in
+        /usr/local/go.</li>
+        <p><strong>Important:</strong> This step will remove a previous installation at 
+        <code>/usr/local/go</code>, if any, prior to extracting. Please back up any data
+        before proceeding.</p>
+        <p>For example, run the following as root or through sudo: <br><br>
+        <code>$ rm -rf /usr/local/go && tar -C /usr/local -xzf
+        go1.17.7.linux-amd64.tar.gz</code>
+        </li>
+
+        <li>Add <code>/usr/local/go/bin</code> to the PATH environment variable: <br>
+        <p>You can do this by adding the following line to your
+        <code>$HOME/.profile</code> or <code>/etc/profile</code> (for a system-wide
+        installation):</p>
+
+        <code>export PATH=$PATH:/usr/local/go/bin</code> <br><br>
+
+        <strong>Note:</strong>Changes made to a profile file may not apply until the next 
+        time you log into your computer. To apply the changes immediately, just run the
+        shell commands directly or execute them from the profile using a command such as
+        source <code>$HOME/.profile</code>
+        </li> <br>
+
+        <li>Verify that you've installed Go by opening a command prompt and typing the
+        following command: <br><br>
+        <code>$ go version</code> 
+        </li> <br>
+
+        <li>Confirm that the command prints the installed version of Go. <br><br>
+        <code>go version go1.17.7 linux/amd64</code>
+        </li>
+        </ol>
+        
+        <hr />
+
+        <footer>
+          <span>&copy;</span> 2020 Dayalan Saravanan
+        </footer>
+
+    </body>
+
+</html>
