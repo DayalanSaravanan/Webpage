@@ -10,7 +10,6 @@
         <script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
         </script>
-        <script src="svg-inject.min.js"></script>
     </head>
 
     <body style="background: #ffffff;" onload="onPageLoad();">
@@ -37,19 +36,25 @@
 
         <p>Trapezoidal rule:
         \begin{equation*}
-        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k})
+        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) 
+        + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k})
         \end{equation*}
         </p> 
 
         <p>Trapezoidal rule with end corrections using the first derivative:
         \begin{equation*}
-        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k}) - \frac{h^{2}}{12} \left( f^{\prime}(x_{n}) - f^{\prime}(x_{0}) \right)
+        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) 
+        + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k}) - \frac{h^{2}}{12} 
+        \left( f^{\prime}(x_{n}) - f^{\prime}(x_{0}) \right)
         \end{equation*}
         </p>
     
         <p>Trapezoidal rule with end corrections using the first and third derivative:
         \begin{equation*}
-        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k}) - \frac{h^{2}}{12} \left( f^{\prime}(x_{n}) - f^{\prime}(x_{0}) \right) + \frac{h^{4}}{720} \left( f^{\prime\prime\prime}(x_{n}) - f^{\prime\prime\prime}(x_{0}) \right)
+        \int_{x_{0}}^{x_{n}} f(x) dx \approx \frac{h}{2} \left( f(x_{0}) 
+        + f(x_{n}) \right) + h \sum_{k=1}^{n-1} f(x_{k}) - \frac{h^{2}}{12} 
+        \left( f^{\prime}(x_{n}) - f^{\prime}(x_{0}) \right) + \frac{h^{4}}{720} 
+        \left( f^{\prime\prime\prime}(x_{n}) - f^{\prime\prime\prime}(x_{0}) \right)
         \end{equation*}
         </p>
 
@@ -152,21 +157,6 @@
         </code></pre> 
 
         <center><img src="Sourcecode/Python/program6.svg" role="img" alt="Numerical quadrature" /></center>    
-
-        <svg height="600" width="600" src="Sourcecode/Python/program6.svg" /></svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <svg viewBox="0 0 600 600">
-                <image x="0" y="0" height="600" width="600" xlink:href="Sourcecode/Python/program6.svg" />
-            </svg>
-        </svg>
-        
-        <iframe src="Sourcecode/Python/program6.svg" style="border:0;"></iframe>
-
-        <!-- <iframe src="/home/saran/NMSC/Endsem/Scripts/program6.py" frameborder="0" height="480" width="95%"></iframe> -->
-        <!-- <embed src="/home/saran/Webpage/Sourcecode/Python/program6.py" height="1295" width="95%"></embed> -->
-        <!-- <pre><code> <script type="text/python" src="/home/saran/NMSC/Endsem/Scripts/program6.py"></script> </code></pre> -->
-
 
         <hr />
 
