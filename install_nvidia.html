@@ -29,11 +29,12 @@
 <hr />
 
 <h4>NVIDIA CUDA Installation</h4>
-<p>Instructions for installing proprietary NVIDIA drivers and the CUDA toolkit
-in Ubuntu 20.04:</p>
+<p>The installation instructions for the proprietary NVIDIA drivers and the CUDA
+toolkit in Ubuntu 20.04 LTS (Focal Fossa).</p>
 
 <p>To use CUDA on your system, you will need the following installed:</p>
-<il>
+
+<ul>
 <li>CUDA-capable GPU <br>
 <p>To verify that your GPU is CUDA-capable, from the command line, enter:</p>
 <pre><code>lspci | grep -i nvidia</code></pre>
@@ -197,7 +198,10 @@ end of the output.
 <p>The CUDA Toolkit and CuPy need (should) match versions. Refer to 
 <a href="https://docs.cupy.dev/en/stable/install.html">CuPy Installation</a> and install
 with the following command in the virtual environment.</p>
-<pre><code>pip install cupy-cuda114</code></pre>         
+<pre><code>pip install cupy-cuda114</code></pre>
+</ul> <br>
+
+Reference: NVIDIA CUDA installation guide for Linux in <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">html</a> version.
 
 <hr />
 
