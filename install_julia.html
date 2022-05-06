@@ -93,33 +93,31 @@ julia> # press the key ] to enter package mode
 
 (@v1.6) pkg> # hit backspace to exit package mode
 
-julia> exit()
-</code></pre>
+julia> exit()</code></pre>
 
         <p>venv creates virtual Julia environments in one or more target directories.</p>
 
-<pre><code>  Usage:
+<pre><code>Usage:
 
-    venv [options] [flags] &lt;env_dirs&gt;
+  venv [options] [flags] &lt;env_dirs&gt;
 
-  Args:
+Args:
 
-    &lt;env_dirs&gt;              one or more directories to create environments in
+  &lt;env_dirs&gt;              one or more directories to create environments in
 
-  Options:
+Options:
 
-    -p, --prompt &lt;prompt&gt;   provides an alternative prompt prefix for this environemtn. (Default: ENV_DIR)
+  -p, --prompt &lt;prompt&gt;   provides an alternative prompt prefix for this environemtn. (Default: ENV_DIR)
 
-  Flags:
+Flags:
 
-    -c, --clear             delete the contents of the environment directory if it alreadyexists. (Default: false)
+  -c, --clear             delete the contents of the environment directory if it alreadyexists. (Default: false)
 
-    -u, --upgrade           upgrade the environment directory to use this version of Julia. (Default: false)
+  -u, --upgrade           upgrade the environment directory to use this version of Julia. (Default: false)
 
-    -h, --help              print this help message
+  -h, --help              print this help message
 
-    -v, --version           print version information
-</code></pre>
+  -v, --version           print version information</code></pre>
 
         <p>Print help dialogue:</p>
         <code>$ venv -h</code>
