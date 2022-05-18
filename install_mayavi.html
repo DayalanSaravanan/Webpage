@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="GitLab Pages">
+<title>Dayalan Saravanan's homepage</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body style="background: #ffffff;" onload="onPageLoad();">
+
+<div>
+<header>
+<h2>Dayalan Saravanan</h2>
+</header>
+
+<nav>
+<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
+<a href="linux.html">Linux</a> &nbsp;&nbsp;
+<a href="math.html">Math</a> &nbsp;&nbsp;
+<a href="music.html">Music</a> &nbsp;&nbsp;
+<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+<a href="programming.html">Programming</a>
+</nav>
+</div>
+
+<hr />
+<h4>Install Mayavi on Ubuntu 20.04</h4>
+<p>The installation instructions for the Mayavi on Python 3.8.10 
+[GCC 9.4.0] on Ubuntu 20.04 LTS.</p>
+
+<p><a href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a> is an 
+interactive 3D plotting package. <a href="https://matplotlib.org/">Matplotlib</a> 
+can also do simple 3D plotting, but Mayavi relies on a more powerful engine 
+( <a href="https://vtk.org/">VTK</a> ) and is more suited to displaying large 
+or complex data.</p>
+
+Installing required packages:
+<p>On Ubuntu 20.4, we need to install (as sudo) the following system packages:</p>
+
+<pre><code>$ apt-get install gcc g++ vtk7 python3-pyqt5</code></pre> <br>
+
+Installing with pip:
+<p><a href="https://pip.pypa.io/en/stable/">pip</a> is 
+<a href="https://www.pypa.io/en/latest/">PyPA</a> recommended tool for 
+installing Python packages from <a href="https://pypi.org/">PyPI</a>. The latest
+version of Mayavi available on PyPI can be found 
+<a href="https://pypi.org/project/mayavi/">here</a>. Required python packages 
+can be automatically fetched and installed with pip.</p>
+
+<p>As of the release version 4.6.0 and above, if you are using Python 3.x and 
+are on a 64 bit machine, installation via pip is the easiest and is as 
+follows:</p>
+
+<pre><code>(venv)$ pip install vtk
+(venv)$ pip install PyQt5
+(venv)$ pip install mayavi</code></pre>
+
+<p>If you are interested in the jupyter notebook support as well, do the 
+following (after ensuring that you have 
+<a href="https://jupyter.org/ ">jupyter</a> installed of course):</p>
+
+<pre><code>(venv)$ jupyter nbextension install --py mayavi --user
+(venv)$ jupyter nbextension enable --py mayavi --user</code></pre>
+
+<p>You will also need to have 
+<a href="https://ipywidgets.readthedocs.io/en/stable/">ipywidgets</a> and 
+<a href="https://ipyevents.readthedocs.io/en/latest/index.html">ipyevents</a> 
+installed via pip.</p>
+
+Installing the bleeding edge:
+<p>If you want to install the latest version of Mayavi from github, you can 
+simply do the following:</P>
+
+<pre><code>(venv)$ pip install PyQt5
+(venv)$ git clone https://github.com/enthought/mayavi.git
+(venv)$ cd mayavi
+(venv)$ pip install -r requirements.txt
+(venv)$ python setup.py install</code></pre>
+
+<p>Add the jupyter nbextensions using the instructions in the section above and 
+you should be good to go.</p>
+
+Testing installation:
+<p>The <a href="https://docs.enthought.com/mayavi/mayavi/auto/mlab_reference.html#module-mayavi.mlab">mayavi.mlab</a> module provides simple plotting functions 
+to apply to numpy arrays, similar to matplotlib plotting interface.</p>
+
+<pre><code>#!/usr/bin/env python
+
+""" Script to plot a surface mesh given by x, y, z positions of its node points """
+
+import numpy as np
+from mayavi import mlab
+
+phi, theta = np.mgrid[0:np.pi:11j, 0:2*np.pi:11j]
+x = np.sin(phi) * np.cos(theta)
+y = np.sin(phi) * np.sin(theta)
+z = np.cos(phi)
+mlab.figure(bgcolor=(1, 1, 1), fgcolor=None)
+mlab.mesh(x, y, z)
+mlab.mesh(x, y, z, representation="wireframe", color=(0, 0, 0))
+mlab.show()</pre></code>
+
+<img src="Sourcecode/Python/meshgrid.png" alt="Arbitrary regular mesh" role="img" style="width: 650pt; height: auto;" /> <br>
+
+Reference:
+<ul>
+<li>Mayavi installation <a href="http://docs.enthought.com/mayavi/mayavi/installation.html">html</a> version.</li>
+<li>3D plotting with Mayavi <a href="http://scipy-lectures.org/packages/3d_plotting/index.html">html</a> version.</li>
+</ul>
+
+<hr />
+
+<footer>
+<span>&copy;</span> 2020 Dayalan Saravanan
+</footer>
+
+</body>
+
+</html>
