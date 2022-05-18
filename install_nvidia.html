@@ -119,8 +119,12 @@ sudo apt-key add /var/cuda-repo-ubuntu2004-11-4-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get -y install cuda</code></pre>
 
+<p>In .bashrc, set up the PATH environment variables:</p>
+<pre><code>export PATH="$PATH:/usr/local/cuda-11.4/bin/"
+export PATH="$PATH:/usr/local/cuda-11.4/lib64:/usr/local/cuda-11.4/lib"</code></pre>
+
 <p>You'll need to reboot your machine after installing the NVIDIA drivers. Once the 
-driver is installed, you can check it with the following command:
+driver is installed, you can check it with the following command:</p>
 <pre><code>nvidia-smi</code></pre>
 
 <p>The output will include details similar to the following:</p>
@@ -159,9 +163,9 @@ Built on Sun_Aug_15_21:14:11_PDT_2021
 Cuda compilation tools, release 11.4, V11.4.120
 Build cuda_11.4.r11.4/compiler.30300941_0</code></pre>
 
-<p>Now, create a symbolic link to the <code>nvcc</code>. This can be done by entering the
+<!--<p>Now, create a symbolic link to the <code>nvcc</code>. This can be done by entering the
 following into a terminal:</p>
-<pre><code>sudo ln -s /usr/local/cuda-11.4/bin/nvcc /usr/bin/nvcc</code></pre>
+<pre><code>sudo ln -s /usr/local/cuda-11.4/bin/nvcc /usr/bin/nvcc</code></pre>-->
 
 <p>Being correctly installed doesn't necessarily mean CUDA is correctly linked to the
 NVIDIA driver. To make sure this is working, use the <code>bandwidthTest</code> utility
