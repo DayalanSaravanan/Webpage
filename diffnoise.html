@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Dayalan Saravanan</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body style="background: #ffffff;" onload="onPageLoad();">
+
+		<div>
+			<header>
+				<h2>Dayalan Saravanan</h2>
+			</header>
+
+      <nav>
+          <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+          <a href="datascience.html">DataScience</a> &nbsp;&nbsp;
+          <a href="linux.html">Linux</a> &nbsp;&nbsp;
+          <a href="math.html">Math</a> &nbsp;&nbsp;
+          <a href="music.html">Music</a> &nbsp;&nbsp;
+          <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+          <a href="programming.html">Programming</a>
+      </nav>
+		</div>
+
+		<hr />
+    <h4>Numerical Differentiation with Noise</h4>
+
+    <p>Let f is the corresponding function value for independent data values in
+    another vector x, which is gridded. Sometimes data can be contaminated with
+    noise, meaning its value is off by a small amount from what it would be if
+    it were computed from a pure mathematical function. This can often occur in
+    engineering due to inaccuracies in measurement devices or the data itself
+    can be slightly modified by perturbations outside the system of interest.
+    </p>
+
+    <pre style="white-space: pre-wrap; padding: 10px 1px;"><code data-language="python">
+    #!/usr/bin/env python
+
+    """ Numerical differentiation with noise """
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    plt.style.use("classic")
+    plt.rc("text", usetex="True")
+    plt.rc("pgf", texsystem="pdflatex")
+    plt.rc("font", family="serif", weight="normal", size=10)
+    plt.rc("axes", labelsize=12, titlesize=12)
+    plt.rc("figure", titlesize=12)
+
+    OMEGA = 100
+    EPSILON = 0.01
+
+    x = np.linspace(0, 2 * np.pi, 1000)
+
+    f1 = np.cos(x)
+    f2 = np.cos(x) + EPSILON * np.sin(OMEGA * x)
+
+    df1 = -np.sin(x)
+    df2 = -np.sin(x) + EPSILON * OMEGA * np.cos(OMEGA * x)
+
+    fig, (ax1, ax2) = plt.subplots(2, 1)
+    ax1.plot(x, f2, "r", label=r"$cos(x) + \epsilon * sin(\omega * x)$")
+    ax1.plot(x, f1, "b", label=r"$cos(x)$")
+    ax1.set(xlabel="$x$", ylabel="$f(x)$")
+    ax1.set(xlim=(0, 2 * np.pi), ylim=(-2.0, 2.0))
+    ax1.legend(loc="best")
+    ax1.grid(True, which="both")
+    ax1.set_title(r"cosine wave corrupted by a small sine wave")
+    ax2.plot(x, df2, "r", label=r"$sin(x) + \epsilon * \omega * cos(\omega * x)$")
+    ax2.plot(x, df1, "b", label=r"$sin(x)$")
+    ax2.set(xlabel="$x$", ylabel="$df(x)$")
+    ax2.set(xlim=(0, 2 * np.pi), ylim=(-2.0, 2.0))
+    ax2.legend(loc="best")
+    ax2.grid(True, which="both")
+    ax2.set_title(r"Numerical differentiation with noise ($\omega = 100$, $\epsilon = 0.01$)")
+    fig.tight_layout()
+    plt.savefig("diffnoise.svg", dpi=100, bbox_inches="tight", pad_inches=0.1)
+    </code></pre>
+
+    <center><img src="sourcecode/python/diffnoise.svg" alt="Numerical differentiation with noise" role="img" style="width: 650pt; height: auto;" /></center>
+
+    <pre style="white-space: pre-wrap; padding: 10px 1px;"><code data-language="julia">
+    #!/usr/bin/env julia
+
+    """ Numerical differentiation with noise """
+
+    import PyPlot as plt
+
+    plt.matplotlib.style.use("classic")
+    plt.rc("text", usetex="True")
+    plt.rc("pgf", texsystem="pdflatex")
+    plt.rc("font", family="serif", weight="normal", size=10)
+    plt.rc("axes", labelsize=12, titlesize=12)
+    plt.rc("figure", titlesize=12)
+
+    OMEGA = 100
+    EPSILON = 0.01
+
+    x = LinRange(0, 2 * pi, 1000)
+
+    f1 = cos.(x)
+    f2 = cos.(x) + EPSILON * sin.(OMEGA .* x)
+
+    df1 = -sin.(x)
+    df2 = -sin.(x) + EPSILON * OMEGA * cos.(OMEGA .* x)
+
+    fig, ax = plt.subplots(2, 1)
+    ax[1].plot(x, f2, "r", label = raw"$cos(x) + \epsilon * sin(\omega * x)$")
+    ax[1].plot(x, f1, "b", label = raw"$cos(x)$")
+    ax[1].set(xlabel = raw"$x$", ylabel = raw"$f(x)$")
+    ax[1].set(xlim = (0, 2 * pi), ylim = (-2.0, 2.0), yticks = -2.0:0.5:2.0)
+    ax[1].tick_params(direction = "in")
+    ax[1].legend(loc="best")
+    ax[1].grid(true, which = "both")
+    ax[1].set_title(raw"cosine wave corrupted by a small sine wave")
+    ax[2].plot(x, df2, "r", label = raw"$sin(x) + \epsilon * \omega * cos(\omega * x)$")
+    ax[2].plot(x, df1, "b", label = raw"$sin(x)$")
+    ax[2].set(xlabel = raw"$x$", ylabel = raw"$df(x)$")
+    ax[2].set(xlim = (0, 2 * pi), ylim = (-2.0, 2.0), yticks = -2.0:0.5:2.0)
+    ax[2].tick_params(direction = "in")
+    ax[2].legend(loc="best")
+    ax[2].grid(true, which = "both")
+    ax[2].set_title(raw"Numerical differentiation with noise ($\omega = 100$, $\epsilon = 0.01$)")
+    fig.tight_layout()
+    plt.savefig("diffnoise.svg", dpi = 100, bbox_inches = "tight", pad_inches = 0.1)
+    </code></pre>
+
+    <center><img src="sourcecode/julia/diffnoise.svg" alt="Numerical differentiation with noise" role="img" style="width: 650pt; height: auto;" /></center>
+
+		<hr />
+
+	  <footer>
+		  &copy; 2020 Dayalan Saravanan
+		</footer>
+
+	</body>
+
+</html>
