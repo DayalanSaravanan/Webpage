@@ -11,14 +11,13 @@
 
   <body style="background: #ffffff;" onload="onPageLoad();">
 
-    <div>
+    <div class="container">
       <header>
         <h2>Dayalan Saravanan</h2>
       </header>
 
       <nav>
         <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-        <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
         <a href="linux.html">Linux</a> &nbsp;&nbsp;
         <a href="math.html">Math</a> &nbsp;&nbsp;
         <a href="music.html">Music</a> &nbsp;&nbsp;
@@ -29,57 +28,61 @@
 
     <hr />
 
-    <h4>Python Installation</h4>
-    <p>Instructions for installing the latest Python instead of (or alongside) an older
-    version on Linux:</p>
+    <h4>Install Python 3.11.5 on Debian 12 GNU/Linux</h4>
+    <p style="margin-top: -17px;"><small>Thursday, September 14, 2023</small></p>
 
-    <p>Use the <code>python --version</code> command to check the version installed. If
-    Python is not installed on your system, or you want to install an updated version,
-    follow the steps below.</p>
+    <p>The instructions for installing the latest Python version 3.11.5 instead
+    of (or alongside) an older version on Debian 12 GNU/Linux.</p>
+
+    <p>Use the <code>python3 --version</code> command to check the version installed.
+    The default version of Python on Debian 12 is Python 3.11.2. If you want to install
+    an updated version, follow the steps below.</p>
 
     <ol>
     <li>Install required development packages to build Python: <br>
-        <p>Debian:</p>
-        <code>$ sudo apt-get update</code> <br>
-        <code>$ sudo apt-get install build-essential zliblg-dev libncurses5-dev
-          libgdbm-dev libnss3-dev libssl-dev libreadline-dev
-          libffi-dev curl</code> <br>
-
-        <p>Fedora:</p>
-        <code>$ sudo dnf groupinstall development</code>
+    <p> </p>
+    <pre><code>$ doas apt-get update <br>
+    $ doas apt-get install build-essential zliblg-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev</code></pre>
     </li> <br>
 
     <li>Download the latest stable release of Python: <br>
-        <p>Visit the <a href="https://www.python.org/">https://www.python.org/</a>
-        and download the latest version. After the download is complete, you have a
-        <code>.tar.xz</code> archive file containing the source code of Python. </p>
+    <p>Visit the <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
+    and download the latest version. After the download is complete, you have a
+    <code>Python-3.11.5.tar.xz</code> archive file containing the source code of Python. </p>
+    <pre><code>$ wget https://www.python.org/ftp/python/3.11.5/Python-3.11.5.tar.xz</code></pre>
     </li> <br>
 
-    <li>Extract the tar.xz:  
-        <code>$ tar -xfv Python-3.*.tar.xz</code>
+    <li>Extract the tar.xz: <br>
+    <p> </p>
+    <pre><code>$ tar -xfv Python-3.11.5.tar.xz</code></pre>
     </li> <br>
 
     <li>Configure the script: <br>
-        <p>Navigate to the configure script and execute it in your terminal.</p>
-        <code>$ cd Python-3.*</code> <br>
-        <code>$ ./configure</code>
+    <p>Navigate to the configure script and execute it in your terminal.</p>
+    <pre><code>$ cd Python-3.11.5/ <br>
+    $ ./configure --enable-optimizations</code></pre>
+    <p>Now run make. You can make the build using nproc, which returns the number of CPUs.</p>
+    <pre><code>$ make -j `nproc`</code></pre>
     </li> <br>
 
     <li>Start the build process: <br>
-        <p>If you already have a version of Python installed on your system and you
-        want to install the new version alongside it, use the command:</p>
-        <code>$ sudo make altinstall</code>
+    <p>If you already have a version of Python installed on your system and you
+    want to install the new version alongside it, use the command.</p>
+    <pre><code>$ doas make altinstall</code></pre>
+    <p>This will install Python at <code>/usr/local/bin/python3.11.</code>
 
-        <p>If you want to replace your current version of Python with this new
-        version, you should uninstall your current Python package using your package
-        manager and then install:</p>
-        <code>$ sudo make install</code>
+    <p>If you want to replace your current version of Python with this new
+    version, you should uninstall your current Python package using your package
+    manager and then install.</p>
+    <pre><code>$ doas make install</code></pre>
+    <p>This will install Python at <code>/usr/bin/python3.</code>
     </li> <br>
 
     <li>Verify the installation: <br>
-        <p>If you haven't encountered any errors, the Python is now installed on
-        your system. To verify it, write these in your terminal:</p>
-        <code>$ python3 --version</code>
+    <p>If you haven't encountered any errors, the Python is now installed on
+    your system. To verify it, write these in your terminal.</p>
+    <pre><code>$ python3.11 --version
+    Python 3.11.5</code></pre>
     </li> <br>
     </ol>
 
@@ -91,14 +94,14 @@
     <p>To activate the virtual environment: </p>
     <code>$ source env/bin/activate</code> <br>
     <code>(env) $</code>
-    <p>Notice that your terminal prompt <code>$</code> is now preceeded by an 
+    <p>Notice that your terminal prompt <code>$</code> is now preceeded by an
     environment name.</p>
     <p>To deactivate the virtual environment: </p>
     <code>(env) $ deactivate</code>
 
     <hr />
 
-    <footer><span>&copy;</span> 2020 Dayalan Saravanan</footer>
+    <footer><span>&copy;</span> 2023 Dayalan Saravanan</footer>
 
   </body>
 
