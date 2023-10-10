@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<meta charset="utf-8">
-<meta name="generator" content="GitLab Pages">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dayalan Saravanan's homepage</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan's homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
 
-<body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-<div>
-<header>
-<h2>Dayalan Saravanan</h2>
-</header>
+    <div class="container">
+      <header>
+        <h2>Dayalan Saravanan</h2>
+      </header>
 
-<nav>
-<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-<a href="linux.html">Linux</a> &nbsp;&nbsp;
-<a href="math.html">Math</a> &nbsp;&nbsp;
-<a href="music.html">Music</a> &nbsp;&nbsp;
-<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-<a href="programming.html">Programming</a>
-</nav>
-</div>
+      <nav>
+        <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+        <a href="linux.html">Linux</a> &nbsp;&nbsp;
+        <a href="math.html">Math</a> &nbsp;&nbsp;
+        <a href="music.html">Music</a> &nbsp;&nbsp;
+        <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+        <a href="programming.html">Programming</a>
+      </nav>
+    </div>
 
-<hr />
-<h4>Install Mayavi on Ubuntu 20.04</h4>
-<p>The installation instructions for the Mayavi on Python 3.8.10 
-[GCC 9.4.0] on Ubuntu 20.04 LTS.</p>
+    <hr />
 
-<p><a href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a> is an 
-interactive 3D plotting package. <a href="https://matplotlib.org/">Matplotlib</a> 
-can also do simple 3D plotting, but Mayavi relies on a more powerful engine 
-( <a href="https://vtk.org/">VTK</a> ) and is more suited to displaying large 
-or complex data.</p>
+    <h4>Install Mayavi on Ubuntu 20.04</h4>
+    <p style="margin-top: -17px;"><small>Wednesday, May 18, 2022</small></p>
 
-Installing required packages:
-<p>On Ubuntu 20.04, we need to install (as sudo) the following system packages:</p>
 
-<pre><code>$ apt-get install gcc g++ vtk7 python3-pyqt5</code></pre> <br>
+    <p>The installation instructions for the Mayavi on Python 3.8.10
+    [GCC 9.4.0] on Ubuntu 20.04 LTS.</p>
 
-Installing with pip:
-<p><a href="https://pip.pypa.io/en/stable/">pip</a> is 
-<a href="https://www.pypa.io/en/latest/">PyPA</a> recommended tool for 
-installing Python packages from <a href="https://pypi.org/">PyPI</a>. The latest
-version of Mayavi available on PyPI can be found 
-<a href="https://pypi.org/project/mayavi/">here</a>. Required python packages 
-can be automatically fetched and installed with pip.</p>
+    <p><a href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a> is an
+    interactive 3D plotting package. <a href="https://matplotlib.org/">Matplotlib</a>
+    can also do simple 3D plotting, but Mayavi relies on a more powerful engine
+    ( <a href="https://vtk.org/">VTK</a> ) and is more suited to displaying large
+    or complex data.</p>
 
-<p>As of the release version 4.6.0 and above, if you are using Python 3.x and 
-are on a 64 bit machine, installation via pip is the easiest and is as 
-follows:</p>
+    Installing required packages:
+    <p>On Ubuntu 20.04, we need to install (as sudo) the following system packages:</p>
 
-<pre><code>(venv)$ pip install vtk
-(venv)$ pip install PyQt5
-(venv)$ pip install mayavi</code></pre>
+    <pre><code>$ sudo apt-get install gcc g++ vtk7 python3-pyqt5</code></pre>
 
-<p>If you are interested in the jupyter notebook support as well, do the 
-following (after ensuring that you have 
-<a href="https://jupyter.org/ ">jupyter</a> installed of course):</p>
+    Installing with pip:
+    <p><a href="https://pip.pypa.io/en/stable/">pip</a> is
+    <a href="https://www.pypa.io/en/latest/">PyPA</a> recommended tool for
+    installing Python packages from <a href="https://pypi.org/">PyPI</a>. The latest
+    version of Mayavi available on PyPI can be found
+    <a href="https://pypi.org/project/mayavi/">here</a>. Required python packages
+    can be automatically fetched and installed with pip.</p>
 
-<pre><code>(venv)$ jupyter nbextension install --py mayavi --user
-(venv)$ jupyter nbextension enable --py mayavi --user</code></pre>
+    <p>As of the release version 4.6.0 and above, if you are using Python 3.x and
+    are on a 64 bit machine, installation via pip is the easiest and is as
+    follows:</p>
 
-<p>You will also need to have 
-<a href="https://ipywidgets.readthedocs.io/en/stable/">ipywidgets</a> and 
-<a href="https://ipyevents.readthedocs.io/en/latest/index.html">ipyevents</a> 
-installed via pip.</p>
+    <pre><code>(venv)$ pip install vtk <br>
+    (venv)$ pip install PyQt5 <br>
+    (venv)$ pip install mayavi</code></pre>
 
-Installing the bleeding edge:
-<p>If you want to install the latest version of Mayavi from github, you can 
-simply do the following:</P>
+    <p>If you are interested in the jupyter notebook support as well, do the
+    following (after ensuring that you have
+    <a href="https://jupyter.org/ ">jupyter</a> installed of course):</p>
 
-<pre><code>(venv)$ pip install PyQt5
-(venv)$ git clone https://github.com/enthought/mayavi.git
-(venv)$ cd mayavi
-(venv)$ pip install -r requirements.txt
-(venv)$ python setup.py install</code></pre>
+    <pre><code>(venv)$ jupyter nbextension install --py mayavi --user <br>
+    (venv)$ jupyter nbextension enable --py mayavi --user</code></pre>
 
-<p>Add the jupyter nbextensions using the instructions in the section above and 
-you should be good to go.</p>
+    <p>You will also need to have
+    <a href="https://ipywidgets.readthedocs.io/en/stable/">ipywidgets</a> and
+    <a href="https://ipyevents.readthedocs.io/en/latest/index.html">ipyevents</a>
+    installed via pip.</p>
 
-Testing installation:
-<p>The <a href="https://docs.enthought.com/mayavi/mayavi/auto/mlab_reference.html#module-mayavi.mlab">mayavi.mlab</a> module provides simple plotting functions 
-to apply to numpy arrays, similar to matplotlib plotting interface.</p>
+    Installing the bleeding edge:
+    <p>If you want to install the latest version of Mayavi from github, you can
+    simply do the following:</P>
 
-<pre><code>#!/usr/bin/env python
+    <pre><code>(venv)$ pip install PyQt5 <br>
+    (venv)$ git clone https://github.com/enthought/mayavi.git <br>
+    (venv)$ cd mayavi <br>
+    (venv)$ pip install -r requirements.txt <br>
+    (venv)$ python setup.py install</code></pre>
 
-""" Script to plot a surface mesh given by x, y, z positions of its node points """
+    <p>Add the jupyter nbextensions using the instructions in the section above and
+    you should be good to go.</p>
 
-import numpy as np
-from mayavi import mlab
+    Testing installation:
+    <p>The <a href="https://docs.enthought.com/mayavi/mayavi/auto/mlab_reference.html#module-mayavi.mlab">mayavi.mlab</a> module provides simple plotting functions
+    to apply to numpy arrays, similar to matplotlib plotting interface.</p>
 
-phi, theta = np.mgrid[0:np.pi:11j, 0:2*np.pi:11j]
-x = np.sin(phi) * np.cos(theta)
-y = np.sin(phi) * np.sin(theta)
-z = np.cos(phi)
-mlab.figure(bgcolor=(1, 1, 1), fgcolor=None)
-mlab.mesh(x, y, z)
-mlab.mesh(x, y, z, representation="wireframe", color=(0, 0, 0))
-mlab.show()</pre></code>
+    <pre style="white-space: pre-wrap; padding: 10px 1px;"><code data-language="python">
+    #!/usr/bin/env python
 
-<img src="Sourcecode/Python/meshgrid.png" alt="Arbitrary regular mesh" role="img" style="width: 650pt; height: auto;" /> <br>
+    """ Script to plot a surface mesh given by x, y, z positions of its node points """
 
-Reference:
-<ul>
-<li>Mayavi installation <a href="http://docs.enthought.com/mayavi/mayavi/installation.html">html</a> version.</li>
-<li>3D plotting with Mayavi <a href="http://scipy-lectures.org/packages/3d_plotting/index.html">html</a> version.</li>
-</ul>
+    import numpy as np
+    from mayavi import mlab
 
-<hr />
+    phi, theta = np.mgrid[0:np.pi:11j, 0:2*np.pi:11j]
+    x = np.sin(phi) * np.cos(theta)
+    y = np.sin(phi) * np.sin(theta)
+    z = np.cos(phi)
+    mlab.figure(bgcolor=(1, 1, 1), fgcolor=None)
+    mlab.mesh(x, y, z)
+    mlab.mesh(x, y, z, representation="wireframe", color=(0, 0, 0))
+    mlab.show()
+    </code></pre>
 
-<footer>
-<span>&copy;</span> 2020 Dayalan Saravanan
-</footer>
+    <img src="sourcecode/python/meshgrid.png" alt="Arbitrary regular mesh" role="img" style="width: 650pt; height: auto;" /> <br>
 
-</body>
+    Reference:
+    <ul>
+    <li>Mayavi installation <a href="http://docs.enthought.com/mayavi/mayavi/installation.html">html</a> version.</li>
+    <li>3D plotting with Mayavi <a href="http://scipy-lectures.org/packages/3d_plotting/index.html">html</a> version.</li>
+    </ul>
+
+    <hr />
+
+    <footer><span>&copy;</span> 2020 Dayalan Saravanan</footer>
+
+  </body>
 
 </html>
