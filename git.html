@@ -11,14 +11,13 @@
 
   <body style="background: #ffffff;" onload="onPageLoad();">
 
-    <div>
+    <div class="container">
       <header>
         <h2>Dayalan Saravanan</h2>
       </header>
 
       <nav>
         <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-        <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
         <a href="linux.html">Linux</a> &nbsp;&nbsp;
         <a href="math.html">Math</a> &nbsp;&nbsp;
         <a href="music.html">Music</a> &nbsp;&nbsp;
@@ -29,7 +28,9 @@
 
     <hr />
 
-    <h4>Git Reference:</h4> 
+    <h4>Git Reference</h4>
+    <p style="margin-top: -17px;"><small>Thursday, May 28, 2020</small></p>
+
     <b>Create a new repository:</b> <br>
     <code>git clone https://gitlab.com/username/Repository.git</code> <br>
     <code>cd Repository</code> <br>
@@ -53,18 +54,18 @@
     <code>git push -u origin --all</code> <br>
     <code>git push -u origin --tags</code> <br>
 
-    
+
     <br><h4>Git Cheat:</h4>
-    <h4>Git Basics</h4> 
+    <h4>Git Basics</h4>
 
     <p>Create empty Git repo in specified directory. Run with no arguments
     to initialize the current directory as a git repository.</p>
-        <pre><code>git init &lt;directory&gt;</code></pre>    
+        <pre><code>git init &lt;directory&gt;</code></pre>
 
     <p>Clone repo located at &lt;repo&gt; onto local machine. Original repo can
         be located on the local filesystem or on a remote machine via HTTP
-    or SSH.</p> 
-        <pre><code>git clone &lt;repo&gt;</code></pre> 
+    or SSH.</p>
+        <pre><code>git clone &lt;repo&gt;</code></pre>
 
     <p>Define author name to be used for all commits in current repo. Devs
     commonly use --global flag to set config options for current user.</p>
@@ -144,7 +145,7 @@
     <pre><code>git pull &lt;remote&gt;</code></pre>
 
     <p>Push the branch to &lt;remote&gt;, along with necessary commits and objects.
-    Creates named branch in the remote repo if it doesn't exist.</p>  
+    Creates named branch in the remote repo if it doesn't exist.</p>
     <pre><code>git push &lt;remote&gt; &lt;branch&gt;</code></pre>
 
     <h4>Git Config</h4>
@@ -153,11 +154,11 @@
     user.</p>
     <pre><code>git config --global user.name &lt;name&gt;</code></pre>
 
-    <p>Define the author email to be used for all commits by the current 
+    <p>Define the author email to be used for all commits by the current
     user.</p>
     <pre><code>git config --global user.email &lt;email&gt;</code></pre>
 
-    <p>Create shortcut for a Git command. Eg. alias.glog "log --graph 
+    <p>Create shortcut for a Git command. Eg. alias.glog "log --graph
     --oneline" will set ""git glog" equivalent to "git log --graph --oneline.
     </p>
     <pre><code>git config --global alias. &lt;alias-name&gt; &lt;git-command&gt;</code></pre>
@@ -192,7 +193,7 @@
     <p>Search for commits with a commit message that matches &lt;pattern&gt;.</p>
     <pre><code>git log --grep="&lt;pattern&gt;"</code></pre>
 
-    <p>Show commits that occur between &lt;since&gt; and &lt;until&gt;. Args can be a 
+    <p>Show commits that occur between &lt;since&gt; and &lt;until&gt;. Args can be a
     commit ID, branch name, HEAD, or any other kind of revision reference.</p>
     <pre><code>git log &lt;since&gt;..&lt;until&gt;</code></pre>
 
