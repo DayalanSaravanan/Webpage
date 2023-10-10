@@ -11,14 +11,13 @@
 
   <body style="background: #ffffff;" onload="onPageLoad();">
 
-    <div>
+    <div class="container">
       <header>
         <h2>Dayalan Saravanan</h2>
       </header>
 
       <nav>
         <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-        <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
         <a href="linux.html">Linux</a> &nbsp;&nbsp;
         <a href="math.html">Math</a> &nbsp;&nbsp;
         <a href="music.html">Music</a> &nbsp;&nbsp;
@@ -29,91 +28,92 @@
 
     <hr />
 
-        <h4>Install Node.js on Debian 10</h4>
+    <h4>Install Node.js on Debian 10 GNU/Linux</h4>
+    <p style="margin-top: -17px;"><small>Tuesday, August 31, 2021</small></p>
 
-        <p>Node.js is a JavaScript platform for general-purpose programming that allows
-        users to build asynchronous network applications quickly. By leveraging JavaScript 
-        on both the front and backend, Node.js can make web application development more
-        consistent and integrated.</p>
-        
-        <p>Debian contains a version of Node.js in its default repositories. To get
-        Node.js from the default Debian software repository, you can use the apt package
-        manager. First, refresh your local package index:</p>
+    <p>Node.js is a JavaScript platform for general-purpose programming that allows
+    users to build asynchronous network applications quickly. By leveraging JavaScript
+    on both the front and backend, Node.js can make web application development more
+    consistent and integrated.</p>
 
-        <pre><code> sudo apt-get update </code></pre>
+    <p>Debian contains a version of Node.js in its default repositories. To get
+    Node.js from the default Debian software repository, you can use the apt package
+    manager. First, refresh your local package index:</p>
 
-        <p>Then install the Node.js package, and npm the Node Package Manager:</p>
+    <pre><code> sudo apt-get update </code></pre>
 
-        <pre><code> sudo apt-get install nodejs npm </code></pre>
+    <p>Then install the Node.js package, and npm the Node Package Manager:</p>
 
-        <p>To verify that the install was successful, run the node command with the
-        <code>-v</code> flag to get the version:</p>
+    <pre><code> sudo apt-get install nodejs npm </code></pre>
 
-        <pre><code> node -v </code></pre>
+    <p>To verify that the install was successful, run the node command with the
+    <code>-v</code> flag to get the version:</p>
 
-        <p>Output</p>
+    <pre><code> node -v </code></pre>
 
-        <h5>Installing Using a PPA</h5>
+    <p>Output</p>
 
-        <p>To work with a more recent version of Node.js, you can install from a PPA
-        (personal package archive) maintained by NodeSource. This is an alternate
-        repository that still works with <code> apt </code>, and will have more up-to-date
-        versions of Node.js than the official Debian repositories. NodeSource has PPAs
-        available for Node versions from 0.10 through to 12.</p>
+    <h5>Installing Using a PPA</h5>
 
-        <p>Let's install the PPA now. This will add the repository to our package list and
-        allow us to install the new packages using apt.</p>
+    <p>To work with a more recent version of Node.js, you can install from a PPA
+    (personal package archive) maintained by NodeSource. This is an alternate
+    repository that still works with <code> apt </code>, and will have more up-to-date
+    versions of Node.js than the official Debian repositories. NodeSource has PPAs
+    available for Node versions from 0.10 through to 12.</p>
 
-        <p>From your home directory, use curl to retrieve the installation script for your
-        preferred Node.js version, making sure to replace 12.x with your preferred version
-        string (if different):</p>
+    <p>Let's install the PPA now. This will add the repository to our package list and
+    allow us to install the new packages using apt.</p>
 
-        <pre><code> curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh </code></pre>
+    <p>From your home directory, use curl to retrieve the installation script for your
+    preferred Node.js version, making sure to replace 12.x with your preferred version
+    string (if different):</p>
 
-        <p>You can inspect the contents of this script with vim or your preferred text
-        editor:</p>
+    <pre><code> curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh </code></pre>
 
-        <pre><code> vim nodesource_setup.sh </code></pre>
+    <p>You can inspect the contents of this script with vim or your preferred text
+    editor:</p>
 
-        <p>Run the script using sudo:</p>
+    <pre><code> vim nodesource_setup.sh </code></pre>
 
-        <pre><code> sudo bash nodesource_setup.sh </code></pre>
+    <p>Run the script using sudo:</p>
 
-        <p>The PPA will be added to your configuration and your local package cache will
-        be updated automatically. Now you can install the nodejs package in the same way
-        you did in the previous step:</p>
+    <pre><code> sudo bash nodesource_setup.sh </code></pre>
 
-        <pre><code> sudo apt-get install nodejs </code></pre>
+    <p>The PPA will be added to your configuration and your local package cache will
+    be updated automatically. Now you can install the nodejs package in the same way
+    you did in the previous step:</p>
 
-        <p>We don't need to install a separate package for npm in this case, as it is
-        included in the nodejs package.</p>
+    <pre><code> sudo apt-get install nodejs </code></pre>
 
-        <p>Verify the installation by running node with the <code> -v </code> version
-        option:</p>
+    <p>We don't need to install a separate package for npm in this case, as it is
+    included in the nodejs package.</p>
 
-        <pre><code> node -v </code></pre>
+    <p>Verify the installation by running node with the <code> -v </code> version
+    option:</p>
 
-        <p>Output</p>
+    <pre><code> node -v </code></pre>
 
-        <p>npm uses a configuration file in your home directory to keep track of updates.
-        It will be created the first time you run npm. Execute this command to verify that
-        npm is installed and to create the configuration file:</p>
+    <p>Output</p>
 
-        <pre><code> npm -v </code></pre>
+    <p>npm uses a configuration file in your home directory to keep track of updates.
+    It will be created the first time you run npm. Execute this command to verify that
+    npm is installed and to create the configuration file:</p>
 
-        <p>Output</p>
+    <pre><code> npm -v </code></pre>
 
-        <p>In order for some npm packages to work (those that require compiling code from
-        source, for example), you will need to install the build-essential package:</p>
+    <p>Output</p>
 
-        <pre><code> sudo apt-get install build-essential </code></pre>
+    <p>In order for some npm packages to work (those that require compiling code from
+    source, for example), you will need to install the build-essential package:</p>
 
-        <p>You now have the necessary tools to work with npm packages that require
-        compiling code from source.</p>
-    
+    <pre><code> sudo apt-get install build-essential </code></pre>
+
+    <p>You now have the necessary tools to work with npm packages that require
+    compiling code from source.</p>
+
     <hr />
 
-      <footer><span>&copy;</span> 2020 Dayalan Saravanan</footer>
+    <footer><span>&copy;</span> 2020 Dayalan Saravanan</footer>
 
   </body>
 
