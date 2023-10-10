@@ -1,138 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="generator" content="GitLab Pages">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Dayalan Saravanan</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
 
-    <body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-        <div>
-            <header>
-                <h2>Dayalan Saravanan</h2>
-            </header>
+    <div class="container">
+      <header>
+        <h2>Dayalan Saravanan</h2>
+      </header>
 
-            <nav>
-                <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-                <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-                <a href="linux.html">Linux</a> &nbsp;&nbsp;
-                <a href="math.html">Math</a> &nbsp;&nbsp;
-                <a href="music.html">Music</a> &nbsp;&nbsp;
-                <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-                <a href="programming.html">Programming</a>
-            </nav>
-        </div>
+      <nav>
+        <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+        <a href="linux.html">Linux</a> &nbsp;&nbsp;
+        <a href="math.html">Math</a> &nbsp;&nbsp;
+        <a href="music.html">Music</a> &nbsp;&nbsp;
+        <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+        <a href="programming.html">Programming</a>
+      </nav>
+    </div>
 
-        <hr />
+    <hr />
 
-        <h4>Installing Julia</h4>
+    <h4>Install Julia stable release v1.9.3 on Debian 12 GNU/Linux</h4>
+    <p style="margin-top: -17px;"><small>Monday, September 18, 2023</small></p>
 
-        <p>It is strongly recommended that the official generic binairs from the downloads
-        page be used to install Julia on Linux. Generic Linux binaries for <code>x86</code> 
-        can be downloaded. This will get you a compressed <code>tar.gz</code> archive that will 
-        have a name similar to <code>julia-1.6.2-linux-x86_64.tar.gz</code>. The following 
-        set of commands downloads the current stable release of Julia into a directory named 
-        <code>julia-1.6.2</code>.</p>
+    <p>It is strongly recommended that the official generic binairs from the downloads
+    page be used to install Julia on Linux. Generic Linux binaries for <code>x86</code>
+    can be downloaded. This will get you a compressed <code>tar.gz</code> archive that
+    will have a name similar to <code>julia-1.9.3-linux-x86_64.tar.gz</code>. The
+    following set of commands downloads the current stable release of Julia into a
+    directory named <code>julia-1.9.3</code>.</p>
 
-<pre><code>$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.2-linux-x86_64.tar.gz
-$ tar zxvf julia-1.6.2-linux-x86_64.tar.gz
-$ mv julia-1.6.2/ .julia/
-</code></pre>
+    <pre><code>$ wget https://julialang-s3.julialang.org/bin/linux/x64/1.9/julia-1.9.3-linux-x86_64.tar.gz <br>
+    $ tar zxvf julia-1.9.3-linux-x86_64.tar.gz <br>
+    $ mv julia-1.9.3/ .julia/</code></pre>
 
-        <p>A directory with the extracted contents will be generated in the same directory
-        as the compressed archive with a name similar to julia-1.6.2, where 1.6.2 is Julia's
-        version number. This is the directory from which Julia will be run; no further installation
-        is needed. To run it, navigate to the <code>julia/bin/</code> directory and type:
-        <code>./julia</code></p>
+    <p>A directory with the extracted contents will be generated in the same directory
+    as the compressed archive with a name similar to julia-1.9.3, where 1.9.3 is Julia's
+    version number. This is the directory from which Julia will be run; no further installation
+    is needed. To run it, navigate to the <code>julia/bin/</code> directory and type:
+    <code>./julia</code></p>
 
-        <p>To add Julia's <code>bin</code> folder (with full path) to <code>PATH</code> 
-        environment variable, you can edit the <code>~/.bashrc</code> file.</p>
+    <p>To add Julia's <code>bin</code> folder (with full path) to <code>PATH</code>
+    environment variable, you can edit the <code>~/.bashrc</code> file.</p>
 
-        <pre><code>export PATH="$PATH:/home/user/.julia/bin"</code></pre>
+    <pre><code>export PATH="$PATH:/home/user/.julia/bin"</code></pre>
 
-        <p>To activate the changes in the current shell, you have to <code>source</code>
-        the updated <code>~/.bashrc</code> file.</p>
+    <p>To activate the changes in the current shell, you have to <code>source</code>
+    the updated <code>~/.bashrc</code> file.</p>
 
-        <pre><code>$ source ~/.bashrc</code></pre>
+    <pre><code>$ source ~/.bashrc</code></pre>
 
-        <p>Now we can invoke Julia by just typing <code>julia</code> at the command prompt.
-        We can do this now from any directory because the <code>PATH</code> has been updated
-        to look for executable programs in our new directory.</p>
+    <p>Now we can invoke Julia by just typing <code>julia</code> at the command prompt.
+    We can do this now from any directory because the <code>PATH</code> has been updated
+    to look for executable programs in our new directory.</p>
 
-<pre><code>$ julia --version
-julia version 1.6.2
-</code></pre>
+    <pre><code>$ julia --version <br>
+    julia version 1.9.3</code></pre>
 
-        <p>Julia installs all its files in a single directory. Deleting the directory where
-        Julia was installed is sufficient. If you would also like to remove your packages,
-        remove <code>~/.julia</code>. The startup file is at <code>~/.julia/config/startup.jl</code> and the history at <code>~/.julia/logs/repl_history.jl</code>
+    <p>Julia installs all its files in a single directory. Deleting the directory where
+    Julia was installed is sufficient. If you would also like to remove your packages,
+    remove <code>~/.julia</code>. The startup file is at <code>~/.julia/config/startup.jl</code>
+    and the history at <code>~/.julia/logs/repl_history.jl</code></p>
 
-        <p>Resources for Julia programming: <br>
-        Download Julia: <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a> <br>
-        Julia 1.6 Documentation: <a href="https://docs.julialang.org/en/v1/">https://docs.julialang.org/en/v1/</a> <br>
-        Get started with Julia: <a href="https://julialang.org/learning/">https://julialang.org/learning/</a></p> 
-      
-        <h4>Creating a virtual environment in Julia:</h4>
+    <p>Resources for Julia programming:
+    <ul style="line-style-position: inside;">
+    <li>Download Julia: <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a></li>
+    <li>Julia 1.9 Documentation: <a href="https://docs.julialang.org/en/v1/">https://docs.julialang.org/en/v1/</a></li>
+    <li>Get started with Julia: <a href="https://julialang.org/learning/">https://julialang.org/learning/</a></li>
+    </ul></p>
 
-        <p>In Julia, VirtualEnv.jl provides support for creating environments with their
-        own site directories, isolated from system site directories. Each virtual
-        environment has its own Julia binary (which matches the version of the binary that
-        was used to create this environment) and can have its own independent set of
-        installed Julia packages in its site directories.</p>
+    <h4>Creating a virtual environment in Julia:</h4>
 
-        <h4>Installation:</h4>
+    <p>In Julia, VirtualEnv.jl provides support for creating environments with their
+    own site directories, isolated from system site directories. Each virtual
+    environment has its own Julia binary (which matches the version of the binary that
+    was used to create this environment) and can have its own independent set of
+    installed Julia packages in its site directories.</p>
 
-<pre><code>$ julia
+    <h4>Installation:</h4>
 
-julia> # press the key ] to enter package mode
+    <pre><code>$ julia <br><br>
 
-(@v1.6) pkg> add VirtualEnv
+    julia> # press the key ] to enter package mode <br><br>
 
-(@v1.6) pkg> # hit backspace to exit package mode
+    (@v1.9) pkg> add VirtualEnv <br><br>
 
-julia> exit()</code></pre>
+    (@v1.9) pkg> # hit backspace to exit package mode <br><br>
 
-        <p>venv creates virtual Julia environments in one or more target directories.</p>
+    julia> exit()</code></pre>
 
-<pre><code>Usage:
+    <p>venv creates virtual Julia environments in one or more target directories.</p>
 
-  venv [options] [flags] &lt;env_dirs&gt;
+    <pre style="white-space: pre; padding: 0.1px 0.1px;"><code>
+    Usage:
 
-Args:
+      venv [options] [flags] &lt;env_dirs&gt;
 
-  &lt;env_dirs&gt;              one or more directories to create environments in
+    Args:
 
-Options:
+      &lt;env_dirs&gt;              one or more directories to create environments in
 
-  -p, --prompt &lt;prompt&gt;   provides an alternative prompt prefix for this environemtn. (Default: ENV_DIR)
+    Options:
 
-Flags:
+      -p, --prompt &lt;prompt&gt;   provides an alternative prompt prefix for this environemtn. (Default: ENV_DIR)
 
-  -c, --clear             delete the contents of the environment directory if it alreadyexists. (Default: false)
+    Flags:
 
-  -u, --upgrade           upgrade the environment directory to use this version of Julia. (Default: false)
+      -c, --clear             delete the contents of the environment directory if it alreadyexists. (Default: false)
 
-  -h, --help              print this help message
+      -u, --upgrade           upgrade the environment directory to use this version of Julia. (Default: false)
 
-  -v, --version           print version information</code></pre>
+      -h, --help              print this help message
 
-        <p>Print help dialogue:</p>
-        <code>$ venv -h</code>
-        <p>Creating a virtual environment:</p>
-        <code>$ venv ~/dsci</code>
-        <p>Activating the virtual environment:</p>
-        <code>$ source ~/dsci/bin/activate</code>
-        <p>Deactivating an environment:</p>
-        <code>$ deactivate</code>
+      -v, --version           print version information
+    </code></pre>
 
-        <hr />
+    <p>Print help dialogue:</p>
+    <code>$ venv -h</code>
+    <p>Creating a virtual environment:</p>
+    <code>$ venv ~/dsci</code>
+    <p>Activating the virtual environment:</p>
+    <code>$ source ~/dsci/bin/activate</code>
+    <p>Deactivating an environment:</p>
+    <code>$ deactivate</code>
 
-        <footer><span>&copy;</span> 2020 Dayalan Saravanan</footer>
+    <hr />
 
-    </body>
+    <footer><span>&copy;</span> 2023 Dayalan Saravanan</footer>
+
+  </body>
 
 </html>
