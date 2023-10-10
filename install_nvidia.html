@@ -1,136 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<meta charset="utf-8">
-<meta name="generator" content="GitLab Pages">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dayalan Saravanan's homepage</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan's homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
 
-<body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-<div>
-<header>
-<h2>Dayalan Saravanan</h2>
-</header>
+    <div class="container">
+      <header>
+        <h2>Dayalan Saravanan</h2>
+      </header>
 
-<nav>
-<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-<a href="linux.html">Linux</a> &nbsp;&nbsp;
-<a href="math.html">Math</a> &nbsp;&nbsp;
-<a href="music.html">Music</a> &nbsp;&nbsp;
-<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-<a href="programming.html">Programming</a>
-</nav>
-</div>
+      <nav>
+        <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
+        <a href="linux.html">Linux</a> &nbsp;&nbsp;
+        <a href="math.html">Math</a> &nbsp;&nbsp;
+        <a href="music.html">Music</a> &nbsp;&nbsp;
+        <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
+        <a href="programming.html">Programming</a>
+      </nav>
+    </div>
 
-<hr />
+    <hr />
 
-<h4>NVIDIA CUDA Installation</h4>
-<p>The installation instructions for the proprietary NVIDIA drivers and the CUDA
-toolkit in Ubuntu 20.04 LTS (Focal Fossa).</p>
+    <h4>Install Nvidia drivers and the CUDA toolkit in Ubuntu 20.04</h4>
+    <p style="margin-top: -17px;"><small>Friday, May 06, 2022</small></p>
 
-<p>To use CUDA on your system, you will need the following installed:</p>
+    <p>The installation instructions for the proprietary NVIDIA drivers and the CUDA
+    toolkit in Ubuntu 20.04 LTS (Focal Fossa).</p>
 
-<ul>
-<li>CUDA-capable GPU <br>
-<p>To verify that your GPU is CUDA-capable, from the command line, enter:</p>
-<pre><code>lspci | grep -i nvidia</code></pre>
+    <p>To use CUDA on your system, you will need the following installed:</p>
 
-<p>If you do not see any settings, update the PCI hardware database that 
-Linux maintains by entering <code>update-pciids</code> (generally found
-in <code>/sbin</code>) at the command line and rerun the previous 
-<code>lspci</code> command.</p>
+    <ul>
+    <li>CUDA-capable GPU <br>
+    <p>To verify that your GPU is CUDA-capable, from the command line, enter:</p>
+    <pre><code>lspci | grep -i nvidia</code></pre>
 
-<p>If your graphics card is from NVIDIA and it is listed in 
-<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a>, 
-your GPU is CUDA-capable. The release notes for the CUDA toolkit also contains a 
-list of supported products.</p> 
-</li> <br>
+    <p>If you do not see any settings, update the PCI hardware database that
+    Linux maintains by entering <code>update-pciids</code> (generally found
+    in <code>/sbin</code>) at the command line and rerun the previous
+    <code>lspci</code> command.</p>
 
-<li> A supported version of Linux with a gcc compiler and toolchain <br>
-<p>The CUDA development tools are only supported on some specific distributions 
-of Linux. These are listed in the CUDA toolkit release notes. To determine which 
-distribution and release number you're running, type the following at the 
-command line:</p>
-<pre><code>uname -m && cat /etc/*release</code></pre>
+    <p>If your graphics card is from NVIDIA and it is listed in
+    <a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a>,
+    your GPU is CUDA-capable. The release notes for the CUDA toolkit also contains a
+    list of supported products.</p>
+    </li> <br>
 
-<p>You should see output similar to the following, modified for your particular 
-system:</p>
+    <li> A supported version of Linux with a gcc compiler and toolchain <br>
+    <p>The CUDA development tools are only supported on some specific distributions
+    of Linux. These are listed in the CUDA toolkit release notes. To determine which
+    distribution and release number you're running, type the following at the
+    command line:</p>
+    <pre><code>uname -m && cat /etc/*release</code></pre>
 
-<pre><code>x86_64
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=20.04
-DISTRIB_CODENAME=focal
-DISTRIB_DESCRIPTION="Ubuntu 20.04.4 LTS"
-NAME="Ubuntu"
-VERSION="20.04.4 LTS (Focal Fossa)"
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME="Ubuntu 20.04.4 LTS"
-VERSION_ID="20.04"
-HOME_URL="https://www.ubuntu.com/"
-SUPPORT_URL="https://help.ubuntu.com/"
-BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=focal
-UBUNTU_CODENAME=focal</code></pre>
+    <p>You should see output similar to the following, modified for your particular
+    system:</p>
 
-<p>The <code>x86_64</code> line indicates you are running on a 64-bit system. The
-remainder gives information about your distribution.</p>
+    <pre><code>x86_64 <br>
+    DISTRIB_ID=Ubuntu <br>
+    DISTRIB_RELEASE=20.04 <br>
+    DISTRIB_CODENAME=focal <br>
+    DISTRIB_DESCRIPTION="Ubuntu 20.04.4 LTS" <br>
+    NAME="Ubuntu" <br>
+    VERSION="20.04.4 LTS (Focal Fossa)" <br>
+    ID=ubuntu <br>
+    ID_LIKE=debian <br>
+    PRETTY_NAME="Ubuntu 20.04.4 LTS" <br>
+    VERSION_ID="20.04" <br>
+    HOME_URL="https://www.ubuntu.com/" <br>
+    SUPPORT_URL="https://help.ubuntu.com/" <br>
+    BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" <br>
+    PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" <br>
+    VERSION_CODENAME=focal <br>
+    UBUNTU_CODENAME=focal</code></pre>
 
-<p>The gcc compiler is required for development using the CUDA toolkit. It is not
-required for running CUDA applications. It is generally installed as part of the
-Linux installation, and in most cases the version of gcc installed with a
-supported version of Linux will work correctly.</p>
+    <p>The <code>x86_64</code> line indicates you are running on a 64-bit system. The
+    remainder gives information about your distribution.</p>
 
-<p>To verify the version of gcc installed on your system, type the following on
-the command line:</p>
-<pre><code>gcc --version</code></pre>
+    <p>The gcc compiler is required for development using the CUDA toolkit. It is not
+    required for running CUDA applications. It is generally installed as part of the
+    Linux installation, and in most cases the version of gcc installed with a
+    supported version of Linux will work correctly.</p>
 
-<p>If an error message displays, you need to install the development tools from
-your Linux distribution or obtain a version of gcc and its accompanying 
-toolchain.
-</li> <br> 
+    <p>To verify the version of gcc installed on your system, type the following on
+    the command line:</p>
+    <pre><code>gcc --version</code></pre>
 
-<li> NVIDIA CUDA Toolkit (available at <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a>) </li>
+    <p>If an error message displays, you need to install the development tools from
+    your Linux distribution or obtain a version of gcc and its accompanying
+    toolchain.
+    </li> <br>
 
-<p>With either a new or old Ubuntu 20.04 installation, it's likely that you'll have
-NVIDIA drivers of one sort or another on your system. We need to make sure these are
-fully removed before attempting to install a new set.</p>
+    <li> NVIDIA CUDA Toolkit (available at <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a>) </li>
 
-<p>When working with graphics drivers, it's best to quit from the <a href="https://www.x.org/wiki/">X.org</a> 
-graphical environment and work on the command line. This can be done by entering the
-following into a terminal:</p>
-<pre><code>sudo systemctl isolate multi-user.target</code></pre>
+    <p>With either a new or old Ubuntu 20.04 installation, it's likely that you'll have
+    NVIDIA drivers of one sort or another on your system. We need to make sure these
+    are fully removed before attempting to install a new set.</p>
 
-<p>To remove your current NVIDIA drivers, enter the following:</p>
-<pre><code>sudo apt-get remove --purge nvidia*</code></pre>
+    <p>When working with graphics drivers, it's best to quit from the <a href="https://www.x.org/wiki/">X.org</a>
+    graphical environment and work on the command line. This can be done by entering
+    the following into a terminal:</p>
+    <pre><code>sudo systemctl isolate multi-user.target</code></pre>
 
-<p>It's safer to reboot your machine at this point, although this isn't strictly necessary.</p>
+    <p>To remove your current NVIDIA drivers, enter the following:</p>
+    <pre><code>sudo apt-get remove --purge nvidia*</code></pre>
 
-<pre><code>wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/11.4.2/local_installers/cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb
-sudo apt-key add /var/cuda-repo-ubuntu2004-11-4-local/7fa2af80.pub
-sudo apt-get update
-sudo apt-get -y install cuda</code></pre>
+    <p>It's safer to reboot your machine at this point, although this isn't strictly
+    necessary.</p>
 
-<p>In .bashrc, set up the PATH environment variables:</p>
-<pre><code>export PATH="$PATH:/usr/local/cuda-11.4/bin/"
-export PATH="$PATH:/usr/local/cuda-11.4/lib64:/usr/local/cuda-11.4/lib"</code></pre>
+    <pre><code>wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin <br>
+    sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600 <br>
+    wget https://developer.download.nvidia.com/compute/cuda/11.4.2/local_installers/cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb <br>
+    sudo dpkg -i cuda-repo-ubuntu2004-11-4-local_11.4.2-470.57.02-1_amd64.deb <br>
+    sudo apt-key add /var/cuda-repo-ubuntu2004-11-4-local/7fa2af80.pub <br>
+    sudo apt-get update <br>
+    sudo apt-get -y install cuda</code></pre>
 
-<p>You'll need to reboot your machine after installing the NVIDIA drivers. Once the 
-driver is installed, you can check it with the following command:</p>
-<pre><code>nvidia-smi</code></pre>
+    <p>In .bashrc, set up the PATH environment variables:</p>
+    <pre><code>export PATH="$PATH:/usr/local/cuda-11.4/bin/" <br>
+    export PATH="$PATH:/usr/local/cuda-11.4/lib64:/usr/local/cuda-11.4/lib"</code></pre>
 
-<p>The output will include details similar to the following:</p>
+    <p>You'll need to reboot your machine after installing the NVIDIA drivers. Once the
+    driver is installed, you can check it with the following command:</p>
+    <pre><code>nvidia-smi</code></pre>
 
-<pre><code>Thu May  5 22:17:48 2022       
+    <p>The output will include details similar to the following:</p>
+
+<pre style="white-space: pre;"><code>Thu May  5 22:17:48 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
 |-------------------------------+----------------------+----------------------+
@@ -142,7 +144,7 @@ driver is installed, you can check it with the following command:</p>
 | N/A   44C    P8    N/A /  N/A |     54MiB /  1994MiB |     N/A      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -151,28 +153,28 @@ driver is installed, you can check it with the following command:</p>
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+</code></pre>
 
-<!--<p>With the drivers installed, the next step is to install the CUDA toolkit.</p>
-<pre><code>sudo apt-get install nvidia-cuda-toolkit</code></pre>-->
+    <!--<p>With the drivers installed, the next step is to install the CUDA toolkit.</p>
+    <pre><code>sudo apt-get install nvidia-cuda-toolkit</code></pre>-->
 
-<p>You can then check CUDA toolkit is installed correctly by running 
-<code>/usr/local/cuda-11.4/bin/nvcc --version</code>, which produces output similar to
-the following:</p>
+    <p>You can then check CUDA toolkit is installed correctly by running
+    <code>/usr/local/cuda-11.4/bin/nvcc --version</code>, which produces output similar to
+    the following:</p>
 
-<pre><code>nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2021 NVIDIA Corporation
-Built on Sun_Aug_15_21:14:11_PDT_2021
-Cuda compilation tools, release 11.4, V11.4.120
-Build cuda_11.4.r11.4/compiler.30300941_0</code></pre>
+    <pre><code>nvcc: NVIDIA (R) Cuda compiler driver <br>
+    Copyright (c) 2005-2021 NVIDIA Corporation <br>
+    Built on Sun_Aug_15_21:14:11_PDT_2021 <br>
+    Cuda compilation tools, release 11.4, V11.4.120 <br>
+    Build cuda_11.4.r11.4/compiler.30300941_0</code></pre>
 
-<!--<p>Now, create a symbolic link to the <code>nvcc</code>. This can be done by entering the
-following into a terminal:</p>
-<pre><code>sudo ln -s /usr/local/cuda-11.4/bin/nvcc /usr/bin/nvcc</code></pre>-->
+    <!--<p>Now, create a symbolic link to the <code>nvcc</code>. This can be done by entering the
+    following into a terminal:</p>
+    <pre><code>sudo ln -s /usr/local/cuda-11.4/bin/nvcc /usr/bin/nvcc</code></pre>-->
 
-<p>Being correctly installed doesn't necessarily mean CUDA is correctly linked to the
-NVIDIA driver. To make sure this is working, use the <code>bandwidthTest</code> utility
-from CUDA's demo_suite folder, usually found in <code>/usr/local/cuda-11.4/extras/demo_suite/</code>
+    <p>Being correctly installed doesn't necessarily mean CUDA is correctly linked to the
+    NVIDIA driver. To make sure this is working, use the <code>bandwidthTest</code> utility
+    from CUDA's demo_suite folder, usually found in <code>/usr/local/cuda-11.4/extras/demo_suite/</code>
 
-<pre><code>[CUDA Bandwidth Test] - Starting...
+<pre style="white-space: pre;"><code>[CUDA Bandwidth Test] - Starting...
 Running on...
 
  Device 0: NVIDIA GeForce GT 710
@@ -197,23 +199,21 @@ Result = PASS
 
 NOTE: The CUDA Samples are not meant for performance measurements. Results may vary when GPU Boost is enabled.</code></pre>
 
-<p>If everything is working correctly, you should see <code>Result = PASS</code> at the 
-end of the output.
+    <p>If everything is working correctly, you should see <code>Result = PASS</code> at the
+    end of the output.
 
-<p>The CUDA Toolkit and CuPy need (should) match versions. Refer to 
-<a href="https://docs.cupy.dev/en/stable/install.html">CuPy Installation</a> and install
-with the following command in the virtual environment.</p>
-<pre><code>pip install cupy-cuda114</code></pre>
-</ul> <br>
+    <p>The CUDA Toolkit and CuPy need (should) match versions. Refer to
+    <a href="https://docs.cupy.dev/en/stable/install.html">CuPy Installation</a> and install
+    with the following command in the virtual environment.</p>
+    <pre><code>pip install cupy-cuda114</code></pre>
+    </ul> <br>
 
-Reference: NVIDIA CUDA installation guide for Linux in <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">html</a> version.
+    Reference: NVIDIA CUDA installation guide for Linux in <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">html</a> version.
 
-<hr />
+    <hr />
 
-<footer>
-<span>&copy;</span> 2020 Dayalan Saravanan
-</footer>
+    <footer><span>&copy;</span> 2023 Dayalan Saravanan</footer>
 
-</body>
+  </body>
 
 </html>
