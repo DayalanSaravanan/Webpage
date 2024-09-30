@@ -1,100 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="generator" content="GitLab Pages">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Dayalan Saravanan</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-        <div>
-            <header>
-                <h2>Dayalan Saravanan</h2>
-            </header>
+    <header>
+      <h3>Dayalan Saravanan</h3>
 
-            <nav>
-                <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-                <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-                <a href="linux.html">Linux</a> &nbsp;&nbsp;
-                <a href="math.html">Math</a> &nbsp;&nbsp;
-                <a href="music.html">Music</a> &nbsp;&nbsp;
-                <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-                <a href="programming.html">Programming</a>
-            </nav>
-        </div>
+      <nav>
+        <a href="index.html" class="current">Home</a>
+        <a href="linux.html">Linux</a>
+        <a href="math.html">Math</a>
+        <a href="music.html">Music</a>
+        <a href="numerical.html">Numerical</a>
+        <a href="programming.html">Programming</a>
+      </nav>
+    </header>
 
-        <hr />
+    <hr />
 
-        <h4>APT package management</h4>
+    <h4>APT package management</h4>
 
-        <p>The simplified event flow of the package management by APT:</p>
-  
-        <ul>
-        <li>Update (<code>"apt update", "aptitude update" or "apt-get update"</code>):
-        </li> <br>
-        <ol>
-        <li> Fetch archive metadata from remote archive </li>
-        <li> Reconstruct and update local metadata for use by APT </li>
-        </ol> <br><br>
+    <p>The simplified event flow of the package management by APT:</p>
 
-        <li>Upgrade (<code>"apt upgrade" and "apt full-upgrade" or "aptitude
-        safe-upgrade" and "aptitude full-upgrade" or "apt-get upgrade" and "apt-get
-        dist-upgrade"</code>): </li> <br>
-        <ol>
-        <li> Chose candidate version which is usually the latest available version for all
-        installed packages </li>
-        <li> Make package dependency resolution </li>
-        <li> Fetch selected binary packages from remote archive if candidate version is
-        different from installed version </li>
-        <li> Unpack fetched binary packages </li>
-        <li> Run preinst script </li>
-        <li> Install binary files </li>
-        <li> Run postinst script </li>
-        </ol> <br><br>
+    <ul>
+    <li>Update (<code>"apt update", "aptitude update" or "apt-get update"</code>):</li>
+    <ol style="list-style-position: inside; padding-left: 20px;">
+    <li> Fetch archive metadata from remote archive </li>
+    <li> Reconstruct and update local metadata for use by APT </li>
+    </ol> <br>
 
-        <li> Install (<code>"apt install ...", "aptitude install ..." or "apt-get install
-        ..."</code>): </li> <br>
-        <ol>
-        <li> Chose packages listed on the command line </li>
-        <li> Make package dependency resolution </li>
-        <li> Fetch selected binary packages from remote archive </li>
-        <li> Unpack fetched binary packages </li>
-        <li> Run preinst script </li>
-        <li> Install binary files </li>
-        <li> Run postint script </li>
-        </ol> <br><br>
+    <li>Upgrade (<code>"apt upgrade" and "apt full-upgrade" or "aptitude
+    safe-upgrade" and "aptitude full-upgrade" or "apt-get upgrade" and "apt-get dist-upgrade"</code>):</li>
+    <ol style="list-style-position: inside; padding-left: 20px;">
+    <li>Chose candidate version which is usually the latest available version for all
+    installed packages </li>
+    <li> Make package dependency resolution </li>
+    <li> Fetch selected binary packages from remote archive if candidate version is
+    different from installed version </li>
+    <li> Unpack fetched binary packages </li>
+    <li> Run preinst script </li>
+    <li> Install binary files </li>
+    <li> Run postinst script </li>
+    </ol> <br>
 
-        <li> Remove (<code>"apt remove ...", "aptitude remove ..." or "apt-get remove
-        ..."</code>): </li> <br>
-        <ol>
-        <li> Chose packages listed on the command line </li>
-        <li> Make package dependency resolution </li>
-        <li> Run prerm script </li>
-        <li> Remove installed files except configuration files </li>
-        <li> Run postrm script </li>
-        </ol> <br><br>
+    <li> Install (<code>"apt install ...", "aptitude install ..." or "apt-get install ..."</code>):</li>
+    <ol style="list-style-position: inside; padding-left: 20px;">
+    <li> Chose packages listed on the command line </li>
+    <li> Make package dependency resolution </li>
+    <li> Fetch selected binary packages from remote archive </li>
+    <li> Unpack fetched binary packages </li>
+    <li> Run preinst script </li>
+    <li> Install binary files </li>
+    <li> Run postint script </li>
+    </ol> <br>
 
-        <li> Purge (<code>"apt purge ...", "aptitude purge ..." or "apt-get purge
-        ..."</code>): </li> <br>
-        <ol>
-        <li> Chose packages listed on the command line </li>
-        <li> Make package dependency resolution </li>
-        <li> Run prerm script </li>
-        <li> Remove installed files including cinfiguration files </li>
-        <li> Run postrm script </li>
-        </ol>
-        </ul>
+    <li> Remove (<code>"apt remove ...", "aptitude remove ..." or "apt-get remove ..."</code>):</li>
+    <ol style="list-style-position: inside; padding-left: 20px;">
+    <li> Chose packages listed on the command line </li>
+    <li> Make package dependency resolution </li>
+    <li> Run prerm script </li>
+    <li> Remove installed files except configuration files </li>
+    <li> Run postrm script </li>
+    </ol> <br>
 
-        <hr />
+    <li> Purge (<code>"apt purge ...", "aptitude purge ..." or "apt-get purge ..."</code>):</li>
+    <ol style="list-style-position: inside; padding-left: 20px;">
+    <li> Chose packages listed on the command line </li>
+    <li> Make package dependency resolution </li>
+    <li> Run prerm script </li>
+    <li> Remove installed files including cinfiguration files </li>
+    <li> Run postrm script </li>
+    </ol>
+    </ul>
 
-        <footer>
-          <span>&copy;</span> 2020 Dayalan Saravanan
-        </footer>
+    <hr />
 
-    </body>
+    <footer><span>&copy;</span> 2024 Dayalan Saravanan</footer>
+
+  </body>
 
 </html>
