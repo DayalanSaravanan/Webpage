@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="generator" content="GitLab Pages">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Dayalan Saravanan's homepage</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan's homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-        <div>
-            <header>
-                <h2>Dayalan Saravanan</h2>
-            </header>
+    <header>
+      <h3>Dayalan Saravanan</h3>
 
-            <nav>
-                <a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-                <a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-                <a href="linux.html">Linux</a> &nbsp;&nbsp;
-                <a href="math.html">Math</a> &nbsp;&nbsp;
-                <a href="music.html">Music</a> &nbsp;&nbsp;
-                <a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-                <a href="programming.html">Programming</a>
-            </nav>
-        </div>
+      <nav>
+        <a href="index.html" class="current">Home</a>
+        <a href="linux.html">Linux</a>
+        <a href="math.html">Math</a>
+        <a href="music.html">Music</a>
+        <a href="numerical.html">Numerical</a>
+        <a href="programming.html">Programming</a>
+      </nav>
+    </header>
 
-        <hr />
+    <hr />
 
-        <h4>Edit a multipage PDF document</h4>
-  
-        <strong>Editing with flpsed:</strong>
+    <h4>Edit a multipage PDF document</h4>
 
-        <p>flpsed works well for entering plain text and tags within a PDF document. flpsed
-        is rather basic, it does not allow adding images (for example: an image of your 
-        signature), but it is very convenient for filling out a PDF document with simple
-        text input.</p>
+    <strong>Editing with flpsed:</strong>
+    <p>flpsed works well for entering plain text and tags within a PDF document. flpsed
+    is rather basic, it does not allow adding images (for example: an image of your
+    signature), but it is very convenient for filling out a PDF document with simple
+    text input.</p>
 
-        <code>$ sudo apt-get install --no-install-recommends flpsed</code> <br><br>
-        <code>$ flpsed document.pdf              # to edit document.pdf</code> <br><br>
+    <code>
+    $ sudo apt-get install --no-install-recommends flpsed <br>
+    $ flpsed document.pdf  # to edit document.pdf
+    </code> <br><br>
 
-        <strong>Editing with gimp and pdftk:</strong>
-        
-        <p>gimp supports importing PDF documents and do anything with the PDF that you can
-        do to a traditional image in gimp.</p>
+    <strong>Editing with gimp and pdftk:</strong>
 
-        <code>$ sudo apt-get install --no-install-recommends gimp pdftk</code>
+    <p>gimp supports importing PDF documents and do anything with the PDF that you can
+    do to a traditional image in gimp.</p>
 
-        <p>If your version of gimp does not support exporting as .pdf you can use the 
-        convert application which is contained in the imagemagick package.</p>
+    <code>$ sudo apt-get install --no-install-recommends gimp pdftk</code>
 
-        <ul>
-        <li> Open the PDF document to edit in gimp. <br>
-        note: If your PDF contains multiple pages, gimp will notify you and allow you to
-        open each page as layer or an image. I use a image as I want each page as its
-        own image.</li> <br>
-        <li> Alter the PDF page(s) as needed and export as .pdf <br>
-        note: If gimp did not allow exporting to .pdf format, save it as a .png and use
-        <code>convert</code> (located in the imagemagick package) to convert from a .png
-        to .pdf</li> <br>
-        <code>$ convert document.png document.pdf</code> <br><br>
-        <li> Use <code>pdftk</code> to concat the separated pdfs back into one PDF 
-        document.</li> <br>
-        <code>
-        $ pdftk document1.pdf document2.pdf document3.pdf cat output document.pdf
-        </code> 
-        </ul>
+    <p>If your version of gimp does not support exporting as .pdf you can use the
+    convert application which is contained in the imagemagick package.</p>
 
-        <p>where document1.pdf, document2.pdf and document3.pdf are the individual .pdf
-        files and document.pdf is the single pdf document that contains all of the 
-        individual pdf files.</p>
+    <ul style="list-style-position: inside; padding-left: 10px;">
+    <li> Open the PDF document to edit in gimp. <br>
+    note: If your PDF contains multiple pages, gimp will notify you and allow you to
+    open each page as layer or an image. I use a image as I want each page as its
+    own image.</li> <br>
 
-        <p>flpsed allows quick and easy editing while gimp/pdftk provide a robust suite for
-        nearly all pdf editing needs. Both approaches provide an alternative to printing
-        documents, signing them and faxing/emailing back.</p>
+    <li> Alter the PDF page(s) as needed and export as .pdf <br>
+    note: If gimp did not allow exporting to .pdf format, save it as a .png and use
+    <code>convert</code> (located in the imagemagick package) to convert from a .png
+    to .pdf</li> <br>
 
-        <hr />
+    <code>$ convert document.png document.pdf</code> <br><br>
 
-        <footer>
-          <span>&copy;</span> 2020 Dayalan Saravanan
-        </footer>
+    <li> Use <code>pdftk</code> to concat the separated pdfs back into one PDF
+    document.</li> <br>
 
-    </body>
+    <code>$ pdftk document1.pdf document2.pdf document3.pdf cat output document.pdf</code> <br>
+
+    <p>where document1.pdf, document2.pdf and document3.pdf are the individual .pdf
+    files and document.pdf is the single pdf document that contains all of the
+    individual pdf files.</p>
+    </ul>
+
+    <p>flpsed allows quick and easy editing while gimp/pdftk provide a robust suite for
+    nearly all pdf editing needs. Both approaches provide an alternative to printing
+    documents, signing them and faxing/emailing back.</p>
+
+    <hr />
+
+    <footer><span>&copy;</span> 2024 Dayalan Saravanan</footer>
+
+  </body>
 
 </html>
