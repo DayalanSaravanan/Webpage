@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="generator" content="GitLab Pages">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Dayalan Saravanan</title>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="GitLab Pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dayalan Saravanan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-	<body style="background: #ffffff;" onload="onPageLoad();">
+  <body style="background: #ffffff;" onload="onPageLoad();">
 
-		<div>
-			<header>
-				<h2>Dayalan Saravanan</h2>
-			</header>
+    <header>
+      <h3>Dayalan Saravanan</h3>
 
-			<nav>
-				<a href="index.html" class="current">Home</a> &nbsp;&nbsp;
-				<a href="datascience.html">DataScience</a> &nbsp;&nbsp; 
-				<a href="linux.html">Linux</a> &nbsp;&nbsp;
-				<a href="math.html">Math</a> &nbsp;&nbsp;
-				<a href="music.html">Music</a> &nbsp;&nbsp;
-				<a href="numerical.html">Numerical</a> &nbsp;&nbsp;
-				<a href="programming.html">Programming</a>
-			</nav>
-		</div>
+      <nav>
+        <a href="index.html" class="current">Home</a>
+        <a href="linux.html">Linux</a>
+        <a href="math.html">Math</a>
+        <a href="music.html">Music</a>
+        <a href="numerical.html">Numerical</a>
+        <a href="programming.html">Programming</a>
+      </nav>
+    </header>
 
-		<hr />
+    <hr />
 
-        <h4>Generating matplotlib graphs without a running X server</h4>
+    <h4>Generating matplotlib graphs without a running X server</h4>
 
-        <code>import matplotlib as mpl <br>
-              mpl.use('Agg') <br>
-              import matplotlib.pyplot as plt <br>
+    <code>import matplotlib as mpl <br>
+          mpl.use('Agg') <br>
+          import matplotlib.pyplot as plt <br>
 
-              fig = plt.figure() <br>
-              ax = fig.add_subplot(111) <br>
-              ax.plot(range(10)) <br>
-              fig.savefig('plot.pdf') </code>
+          fig = plt.figure() <br>
+          ax = fig.add_subplot(111) <br>
+          ax.plot(range(10)) <br>
+          fig.savefig('plot.pdf') </code>
 
-		
-		<hr />
+    <hr />
 
-		<dev>
-			<footer>
-                <span>&copy;</span> 2020 Dayalan Saravanan
-			</footer>
-		</dev>
+    <footer><span>&copy;</span> 2024 Dayalan Saravanan</footer>
 
-	</body>
+  </body>
 
 </html>
